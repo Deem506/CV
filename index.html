@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #fbf8fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(33, 29, 29, 0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            text-transform: uppercase;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #000;
+            border-bottom: 1px dashed #dfeaf5;
+            padding-bottom: 5px;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .flex-item {
+            flex: 1 1 45%;
+            background: #dceae8cb;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        .rectangle {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .project-title {
+            cursor: pointer;
+            color: #0f4784;
+            font-weight: bold;
+        }
+        .project-description {
+            display: none;
+            margin-top: 10px;
+            border-top: 1px dashed #99b8d8;
+            padding-top: 10px;
+        }
+        .certificates img {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 10px;
+            display: block;
+        }
+        .skill-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-size: 0.9em;
+            color: #fff;
+            font-weight: bold;
+        }
+        .sql { background: conic-gradient(#97d199 0% 90%, #e0e0e0 90%); }
+        .python { background: conic-gradient(#8aadc9 0% 95%, #e0e0e0 95%); }
+        .java { background: conic-gradient(#efc78c 0% 70%, #e0e0e0 70%); }
+        .assembly { background: conic-gradient(#e68179 0% 90%, #e0e0e0 90%); }
+    </style>
+    <script>
+        function toggleDescription(event) {
+            const description = event.nextElementSibling;
+            description.style.display = description.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CV</h1>
+        </header>
+        
+        <div class="flex-container">
+            <!-- Left Column -->
+            <div class="flex-item">
+                <!-- Personal Information -->
+                <section>
+                    <h2>Personal Information</h2>
+                    <div class="rectangle">
+                        <p>Name: Deem Mohammed ALbukhaytan</p>
+                        <p>Address: Riyadh</p>
+                        <p>Email: deemt70@gmail.com</p>
+                        <p>Phone: 0533088061</p>
+                        <p>CS student</p> 
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section>
+                    <h2>Skills</h2>
+                    <div class="rectangle">
+                        <ul>
+                            <li><div class="skill-circle sql">90%</div>SQL</li>
+                            <li><div class="skill-circle python">95%</div>Python</li>
+                            <li><div class="skill-circle java">70%</div>Java</li>
+                            <li><div class="skill-circle assembly">90%</div>Assembly language</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Social Network Links -->
+                <section>
+                    <h2>Social Networking Links</h2>
+                    <div class="rectangle">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/deem-mohammed-08722928b">My LinkedIn profile</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="flex-item">
+                <!-- Academic Information -->
+                <section>
+                    <h2>Academic Information</h2>
+                    <div class="rectangle">
+                        <ul>
+                            <li>Academic Degree: High School Certificate in Scientific Specialization</li>
+                            <li>High school: Tharmada High School, graduating in 2021</li>
+                            <li>University: Bachelor of Computer Science student at Shaqra University</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Projects -->
+                <section>
+                    <h2>Projects</h2>
+                    <div class="rectangle">
+                        <ul>
+                            <li>
+                                <span class="project-title" onclick="toggleDescription(this)">Program to calculate age</span>
+                                <div class="project-description">
+                                    Age calculator is a calculator that presents to you your exact age, we thought of it to help people to calculate their age in fast, easy, and accurate results. Our calculator will give you your age in terms of years, months, days.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="project-title" onclick="toggleDescription(this)">Academic training database</span>
+                                <div class="project-description">
+                                    The idea of the project is to create a database for the training institute, which provides courses to learn medicine, computer science, English, and business administration. We created a set of tables to start designing the database, which includes the name and information of the course, and the information of the trainer and trainee
+                                </div>
+                            </li>
+                            <li>
+                                <span class="project-title" onclick="toggleDescription(this)">Color coordination website</span>
+                                <div class="project-description">
+                                    A website that helps users coordinate colors for various design projects, ensuring harmonious and aesthetically pleasing color schemes.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="project-title" onclick="toggleDescription(this)">Tire pressure measuring device using Arduino</span>
+                                <div class="project-description">
+                                    The tire is the most important safety element in the car. It supports the car with the air inside it and the rubber coating around it, improves the car's grip, and absorbs shocks that occur while driving. This device measures tire pressure to ensure safety.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section>
+                    <h2>Certificates</h2>
+                    <div class="rectangle certificates">
+                        <ul>
+                            <li>
+                                <p>PCAP: Programming Essentials in Python - Cisco</p>
+                                <img src="python.png" width="1399" height="200">
+                            </li>
+                            <li>
+                                <p>Introduction to IoT - Cisco Networking Academy</p>
+                                <img src="Iot_certificate.png" width="1399" height="150">
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Contact Me -->
+        <section>
+            <h2>Contact Me</h2>
+            <div class="rectangle">
+                <p>Email: deemt70@gmail.com</p>
+                <a href="https://www.linkedin.com/in/deem-mohammed-08722928b">LinkedIn Profile</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
